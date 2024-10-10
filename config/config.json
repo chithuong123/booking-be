@@ -1,9 +1,25 @@
 {
   "development": {
-    "username": "thuong",
-    "password": "1",
+    "username": "postgres",
+    "password": "",
     "database": "wedding-booking",
     "host": "localhost",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "",
+    "database": "wedding-booking_test",
+    "host": "localhost",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "staging": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "wedding_booking_staging",
+    "host": "postgres",
     "port": 5432,
     "dialect": "postgres"
   }

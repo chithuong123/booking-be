@@ -8,6 +8,8 @@ const verifyToken = (req, res, next) => {
   }
 
   // Cắt bỏ phần "Bearer " từ token
+  console.log(token);
+
   token = token.replace('Bearer ', '');
 
   jwt.verify(token, secretKey, (err, decoded) => {

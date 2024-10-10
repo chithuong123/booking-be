@@ -8,16 +8,16 @@ exports.createBooking = async (req, res) => {
   try {
     // Truy vấn để lấy user_id từ email
     const user = await User.findOne({ where: { email } });
-    
+
     if (!user) {
         return res.status(404).send({ message: 'User not found' });
     }
-    
+
     const userId = user.id; // Lấy user_id từ đối tượng User
     const bookingDate = req.body.booking_date;
     const totalPrice = req.body.price;
     const serviceId = req.body.serviceId;
-    
+
     // Tạo booking mới
     const newBooking = await Booking.create({
       userId,

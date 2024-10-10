@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const { User } = require('../models'); // Đảm bảo import đúng mô hình User
 const secretKey = 'your_secret_key'; // Đảm bảo rằng bạn đã định nghĩa secretKey
 
